@@ -3,7 +3,6 @@
 이 프로젝트는 최신 React(19), TypeScript, Tailwind CSS, Storybook 환경을 빠르게 구축할 수 있는 템플릿입니다.
 
 ## 주요 특징
-- CRA(공식 TypeScript 템플릿) 기반
 - Tailwind CSS 완벽 적용
 - Storybook에서 Tailwind 유틸리티 클래스 사용 가능
 - 모든 컴포넌트에 한글 주석, 명확한 변수명, 에러 처리, 함수 분리 등 전문가 기준 코드
