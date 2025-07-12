@@ -3,13 +3,15 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { Page } from './stories/Page';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
 root.render(
   <React.StrictMode>
-    <App />
+    {/* 스토리북 컴포넌트들을 조합한 Page를 렌더링 */}
+    <Page />
   </React.StrictMode>
 );
 
