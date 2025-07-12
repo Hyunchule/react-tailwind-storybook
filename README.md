@@ -1,46 +1,63 @@
-# Getting Started with Create React App
+# 리액트 + 타입스크립트 + 테일윈드 + 스토리북 템플릿
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+이 프로젝트는 최신 React(19), TypeScript, Tailwind CSS, Storybook 환경을 빠르게 구축할 수 있는 템플릿입니다.
 
-## Available Scripts
+## 주요 특징
+- CRA(공식 TypeScript 템플릿) 기반
+- Tailwind CSS 완벽 적용
+- Storybook에서 Tailwind 유틸리티 클래스 사용 가능
+- 모든 컴포넌트에 한글 주석, 명확한 변수명, 에러 처리, 함수 분리 등 전문가 기준 코드
+- index.tsx에서 Page 컴포넌트가 메인으로 렌더링됨
 
-In the project directory, you can run:
+## 설치 및 실행 방법
+1. 의존성 설치
+   ```bash
+   npm install
+   ```
+2. 개발 서버 실행
+   ```bash
+   npm start
+   # http://localhost:3000
+   ```
+3. Storybook 실행
+   ```bash
+   npm run storybook
+   # http://localhost:6006
+   ```
+4. 배포용 빌드
+   ```bash
+   npm run build
+   # build 폴더 생성
+   ```
 
-### `npm start`
+## 폴더 구조
+- `/src` : 리액트 소스 코드
+  - `/stories` : Storybook 컴포넌트 및 스토리
+    - `Button.tsx`, `Header.tsx`, `Page.tsx` : 주요 UI 컴포넌트 (Tailwind 적용)
+    - `*.stories.ts` : 각 컴포넌트의 Storybook 스토리
+  - `index.tsx` : 앱 진입점, Page 컴포넌트 렌더링
+  - `index.css` : Tailwind CSS 및 글로벌 스타일
+- `/.storybook` : Storybook 설정 파일
+  - `main.ts` : 빌더/애드온/스토리 경로 등 설정
+  - `preview.ts` : 글로벌 스타일 적용, 파라미터 설정 등
+- `/public` : 정적 파일
+- `tailwind.config.js`, `postcss.config.js` : Tailwind/PostCSS 설정
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## 깃허브 저장소 배포 방법
+1. 저장소 생성 후 원격 연결
+   ```bash
+   git remote add origin https://github.com/Hyunchule/react-tailwind-storybook.git
+   git branch -M main
+   git push -u origin main
+   ```
+2. 배포용 빌드 후 커밋/푸시
+   ```bash
+   npm run build
+   git add build
+   git commit -m "배포용 build 폴더 추가"
+   git push origin main
+   ```
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+---
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+문의 및 피드백은 이슈로 남겨주세요.
